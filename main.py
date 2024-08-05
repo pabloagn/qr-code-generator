@@ -1,16 +1,16 @@
 import qrcode
 from PIL import Image
+import os
 
-# Define the vCard data
-vcard_data = """
-BEGIN:VCARD
-VERSION:3.0
-FN:John Doe
-ORG:Company
-TEL:+1-234-567-890
-EMAIL:john.doe@example.com
-END:VCARD
-"""
+# Define paths
+vcard_file_path = './data/vcard-1.txt'
+assets_dir = "assets"
+logo_path = os.path.join(assets_dir, 'Solenoid Labs - Icon - Black Solid.png')
+output_file_path = os.path.join(assets_dir, "vcard_qr_code_with_logo.png")
+
+# Read vCard data from file
+with open(vcard_file_path, 'r') as file:
+    vcard_data = file.read()
 
 # Create QR code
 qr = qrcode.QRCode(
@@ -26,7 +26,7 @@ qr.make(fit=True)
 img = qr.make_image(fill_color="black", back_color="white").convert('RGB')
 
 # Load the logo image
-logo = Image.open('/mnt/data/qr-code-1.png')
+logo = Image.open(logo_path)
 
 # Calculate the size of the logo
 box_size = img.size[0] // qr.box_size
@@ -40,6 +40,6 @@ logo_position = ((img.size[0] - logo_size) // 2, (img.size[1] - logo_size) // 2)
 img.paste(logo, logo_position, mask=logo)
 
 # Save the QR code with the logo
-img.save("vcard_qr_code_with_logo.png")
+img.save(output_file_path)
 
-print("QR Code generated and saved as 'vcard_qr_code_with_logo.png'")
+print(f"QR Code generated and saved as '{output_file_path}'")

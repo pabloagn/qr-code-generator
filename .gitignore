@@ -1,0 +1,14 @@
+# Ignore everything under /assets
+assets/
+
+# Ignore everything under /outputs
+outputs/
+
+# Ignore .vscode directory
+.vscode/
+
+# Ignore everything under /data
+data/*
+
+# Except for the template file
+!data/vcard.template.txt

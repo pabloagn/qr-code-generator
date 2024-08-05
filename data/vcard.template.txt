@@ -1,0 +1,34 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:John Doe
+N:Doe;John;;;
+NICKNAME:Johnny
+PHOTO;VALUE=URI:https://example.com/photo.jpg
+BDAY:19900101
+ANNIVERSARY:20150101
+GENDER:M
+ADR;TYPE=HOME:;;123 Main Street;Hometown;CA;12345;USA
+LABEL;TYPE=HOME:123 Main Street\nHometown\, CA 12345\nUSA
+ADR;TYPE=WORK:;;456 Corporate Blvd;Business City;NY;67890;USA
+LABEL;TYPE=WORK:456 Corporate Blvd\nBusiness City\, NY 67890\nUSA
+TEL;TYPE=CELL:+1-234-567-890
+TEL;TYPE=HOME:+1-234-567-891
+TEL;TYPE=WORK:+1-234-567-892
+TEL;TYPE=FAX:+1-234-567-893
+EMAIL;TYPE=HOME:john.doe@home.com
+EMAIL;TYPE=WORK:john.doe@work.com
+URL;TYPE=HOME:https://home.example.com
+URL;TYPE=WORK:https://work.example.com
+ORG:Company
+TITLE:Software Engineer
+ROLE:Developer
+LOGO;VALUE=URI:https://example.com/logo.png
+NOTE:This is a note about John Doe.
+REV:20230801T080000Z
+UID:123e4567-e89b-12d3-a456-426614174000
+KEY;TYPE=WORK:ftp://example.com/keys/johndoe.asc
+LANG:en
+TZ:-08:00
+IMPP;X-SERVICE-TYPE=Skype:skype:john.doe
+IMPP;X-SERVICE-TYPE=WhatsApp:tel:+1234567890
+END:VCARD
